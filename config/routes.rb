@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  get 'opac/serch'
+  get 'opac/search'
 
   get 'opac/result'
 
