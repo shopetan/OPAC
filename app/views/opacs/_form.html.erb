@@ -1,0 +1,115 @@
+<%= form_for @opac, :html => { :class => "form-horizontal opac" } do |f| %>
+
+    <% if @opac.errors.any? %>
+    <div id="error_expl" class="panel panel-danger">
+      <div class="panel-heading">
+        <h3 class="panel-title"><%= pluralize(@opac.errors.count, "error") %> prohibited this opac from being saved:</h3>
+      </div>
+      <div class="panel-body">
+        <ul>
+        <% @opac.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+        </ul>
+      </div>
+    </div>
+  <% end %>
+
+  <div class="control-group">
+    <%= f.label :nbc, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :nbc, :class => 'form-control' %>
+    </div>
+    <%= error_span(@opac[:nbc]) %>
+  </div>
+  <div class="control-group">
+    <%= f.label :isbn, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :isbn, :class => 'form-control' %>
+    </div>
+    <%= error_span(@opac[:isbn]) %>
+  </div>
+  <div class="control-group">
+    <%= f.label :tr, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :tr, :class => 'form-control' %>
+    </div>
+    <%= error_span(@opac[:tr]) %>
+  </div>
+  <div class="control-group">
+    <%= f.label :author, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :author, :class => 'form-control' %>
+    </div>
+    <%= error_span(@opac[:author]) %>
+  </div>
+  <div class="control-group">
+    <%= f.label :pub, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :pub, :class => 'form-control' %>
+    </div>
+    <%= error_span(@opac[:pub]) %>
+  </div>
+  <div class="control-group">
+    <%= f.label :year, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :year, :class => 'form-control' %>
+    </div>
+    <%= error_span(@opac[:year]) %>
+  </div>
+  <div class="control-group">
+    <%= f.label :phys, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :phys, :class => 'form-control' %>
+    </div>
+    <%= error_span(@opac[:phys]) %>
+  </div>
+  <div class="control-group">
+    <%= f.label :series, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :series, :class => 'form-control' %>
+    </div>
+    <%= error_span(@opac[:series]) %>
+  </div>
+  <div class="control-group">
+    <%= f.label :note, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :note, :class => 'form-control' %>
+    </div>
+    <%= error_span(@opac[:note]) %>
+  </div>
+  <div class="control-group">
+    <%= f.label :titleheading, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :titleheading, :class => 'form-control' %>
+    </div>
+    <%= error_span(@opac[:titleheading]) %>
+  </div>
+  <div class="control-group">
+    <%= f.label :authorheading, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :authorheading, :class => 'form-control' %>
+    </div>
+    <%= error_span(@opac[:authorheading]) %>
+  </div>
+  <div class="control-group">
+    <%= f.label :holdingsrecord, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :holdingsrecord, :class => 'form-control' %>
+    </div>
+    <%= error_span(@opac[:holdingsrecord]) %>
+  </div>
+  <div class="control-group">
+    <%= f.label :holdingloc, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :holdingloc, :class => 'form-control' %>
+    </div>
+    <%= error_span(@opac[:holdingloc]) %>
+  </div>
+
+
+  <%= f.submit nil, :class => 'btn btn-primary' %>
+  <%= link_to t('.cancel', :default => t("helpers.links.cancel")),
+            opacs_path, :class => 'btn btn-default' %>
+
+<% end %>
