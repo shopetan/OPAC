@@ -1,0 +1,43 @@
+<%- model_class = Opac -%>
+<div class="page-header">
+  <h1><%=t '.title', :default => model_class.model_name.human.titleize %></h1>
+</div>
+
+<dl class="dl-horizontal">
+  <dt><strong><%= model_class.human_attribute_name(:nbc) %>:</strong></dt>
+  <dd><%= @opac.nbc %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:isbn) %>:</strong></dt>
+  <dd><%= @opac.isbn %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:tr) %>:</strong></dt>
+  <dd><%= @opac.tr %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:author) %>:</strong></dt>
+  <dd><%= @opac.author %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:pub) %>:</strong></dt>
+  <dd><%= @opac.pub %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:year) %>:</strong></dt>
+  <dd><%= @opac.year %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:phys) %>:</strong></dt>
+  <dd><%= @opac.phys %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:series) %>:</strong></dt>
+  <dd><%= @opac.series %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:note) %>:</strong></dt>
+  <dd><%= @opac.note %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:titleheading) %>:</strong></dt>
+  <dd><%= @opac.titleheading %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:authorheading) %>:</strong></dt>
+  <dd><%= @opac.authorheading %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:holdingsrecord) %>:</strong></dt>
+  <dd><%= @opac.holdingsrecord %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:holdingloc) %>:</strong></dt>
+  <dd><%= @opac.holdingloc %></dd>
+</dl>
+
+<%= link_to t('.back', :default => t("helpers.links.back")),
+              opacs_path, :class => 'btn btn-default'  %>
+<%= link_to t('.edit', :default => t("helpers.links.edit")),
+              edit_opac_path(@opac), :class => 'btn btn-default' %>
+<%= link_to t('.destroy', :default => t("helpers.links.destroy")),
+              opac_path(@opac),
+              :method => 'delete',
+              :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) },
+              :class => 'btn btn-danger' %>
