@@ -1,5 +1,5 @@
 class OpacController < ApplicationController
-  def serch
+  def search
   end
 
   def result
