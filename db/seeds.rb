@@ -5,3 +5,24 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+
+File.foreach('vendor/opac/surperOpac.txt') do |line|
+  next if $. == 1
+  line = line.chomp
+
+  items = line.split("|")
+
+  Opac.create({:nbc => items[0],
+               :isbn => items[1],
+               :tr => items[2],
+               :author => items[3],
+               :pub => items[4],
+               :year => items[5],
+               :phys => items[6],
+               :series => items[7],
+               :note => items[8],
+               :titleheading => items[9],
+               :authorheading => items[10],
+               :holdingsrecord => items[11],
+               :holdingloc => items[12]})
+end
