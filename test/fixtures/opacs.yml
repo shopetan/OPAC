@@ -1,0 +1,31 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  nbc: MyText
+  isbn: MyText
+  tr: MyText
+  author: MyText
+  pub: MyText
+  year: MyText
+  phys: MyText
+  series: MyText
+  note: MyText
+  titleheading: MyText
+  authorheading: MyText
+  holdingsrecord: MyText
+  holdingloc: MyText
+
+two:
+  nbc: MyText
+  isbn: MyText
+  tr: MyText
+  author: MyText
+  pub: MyText
+  year: MyText
+  phys: MyText
+  series: MyText
+  note: MyText
+  titleheading: MyText
+  authorheading: MyText
+  holdingsrecord: MyText
+  holdingloc: MyText
