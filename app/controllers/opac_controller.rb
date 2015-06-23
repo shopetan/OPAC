@@ -1,0 +1,2 @@
+class OpacController < ApplicationController
+end
