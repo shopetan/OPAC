@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   get 'opac/search' => 'opac#search'
-  post 'opac/search' => 'opac#search'
+  post 'opac/search' => 'opac/search'
   
   get 'opac/result'
   

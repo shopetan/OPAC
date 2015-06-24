@@ -7,7 +7,7 @@
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
 File.foreach('vendor/opac/surperOpac.txt') do |line|
-  next if $. == 1
+  next if $. == 0
   line = line.chomp
 
   items = line.split("|")
