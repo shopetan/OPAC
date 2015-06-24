@@ -1,9 +1,11 @@
 Rails.application.routes.draw do
-  get 'opac/search'
-
+  get 'opac/search' => 'opac#search'
+  post 'opac/search' => 'opac#search'
+  
   get 'opac/result'
-
-  get 'opac/detail'
+  
+  get 'opac/detail/:nbc' => 'opac#detail#:nbc'
+  post 'opac/detail/:nbc' => 'opac#detail#:nbc'
 
   get 'home/index'
 

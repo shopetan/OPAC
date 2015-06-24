@@ -43,6 +43,12 @@ gem "font-awesome-rails"
 # Twitter社が提供しているCSSとJavaScriptのフレームワーク
 gem 'twitter-bootstrap-rails'
 
+#検索用gem
+gem 'ransack'
+#PageNation
+gem 'kaminari'
+
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
