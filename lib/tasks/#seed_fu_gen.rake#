@@ -1,0 +1,5 @@
+namespace :seed_fu_gen do
+  desc 'generate seed-fu file for opac.'
+  task :opac => :encironment do |t|
+    SeedFu::Write.write()
+end
