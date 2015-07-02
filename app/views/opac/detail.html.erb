@@ -1,2 +1,67 @@
-<h1>Opac#detail</h1>
-<p>Find me in app/views/opac/detail.html.erb</p>
+<div class="container">
+	<% @opac.each do |attr| %>
+	<h1><%= attr[:tr] %></h1>
+    <table class="table">
+      <thead>
+        <tr>
+          <th style="width: 200px;">属性</th>
+          <th>内容</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="active">
+          <th scope="row">NBC</th>
+				<td><%= attr[:nbc] %></td>
+        </tr>
+        <tr>
+          <th scope="row">isbn</th>
+          <td><%= attr[:isbn] %></td>
+        </tr>
+        <tr class="active">
+          <th scope="row">タイトル</th>
+          <td><%= attr[:tr] %></td>
+        </tr>
+        <tr>
+          <th scope="row">著者</th>
+          <td><%= attr[:author] %></td>
+        </tr>
+        <tr class="active">
+          <th scope="row">出版社</th>
+          <td><%= attr[:pub] %></td>
+        </tr>
+        <tr>
+          <th scope="row">出版日</th>
+          <td><%= attr[:year] %></td>
+        </tr>
+        <tr class="active">
+          <th scope="row">サイズ</th>
+          <td><%= attr[:phys]%></td>
+        </tr>
+        <tr>
+          <th scope="row">シリーズ</th>
+          <td><%= attr[:series] %></td>
+        </tr>
+        <tr class="active">
+          <th scope="row">備考</th>
+          <td><%= attr[:note] %></td>
+        </tr>
+        <tr>
+          <th scope="row">読み(タイトル)</th>
+          <td><%= attr[:titleheading] %></td>
+        </tr>
+        <tr class="active">
+          <th scope="row">読み(著者名)</th>
+          <td><%= attr[:authorheading] %></td>
+        </tr>
+				<tr>
+					<th scope="row">保持記録</th>
+					<td><%= attr[:holdingsrecord] %></td>
+				</tr>
+				<tr>
+					<th scope="row">NDC</th>
+					<td><%= attr[:holdingloc] %></td>
+				</tr>
+      </tbody>
+    </table>
+  <% end %>
+</div>
