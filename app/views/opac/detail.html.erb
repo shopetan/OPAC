@@ -1,6 +1,6 @@
 <div class="container">
-	<% @opac.each do |attr| %>
-	<h1><%= attr[:tr] %></h1>
+	<% @opac.each do |item| %>
+	<h1><%= item[:tr] %></h1>
     <table class="table">
       <thead>
         <tr>
@@ -11,55 +11,55 @@
       <tbody>
         <tr class="active">
           <th scope="row">NBC</th>
-				<td><%= attr[:nbc] %></td>
+				<td><%= item[:nbc] %></td>
         </tr>
         <tr>
           <th scope="row">isbn</th>
-          <td><%= attr[:isbn] %></td>
+          <td><%= item[:isbn] %></td>
         </tr>
         <tr class="active">
           <th scope="row">タイトル</th>
-          <td><%= attr[:tr] %></td>
+          <td><%= item[:tr] %></td>
         </tr>
         <tr>
           <th scope="row">著者</th>
-          <td><%= attr[:author] %></td>
+          <td><%= item[:author] %></td>
         </tr>
         <tr class="active">
           <th scope="row">出版社</th>
-          <td><%= attr[:pub] %></td>
+          <td><%= item[:pub] %></td>
         </tr>
         <tr>
           <th scope="row">出版日</th>
-          <td><%= attr[:year] %></td>
+          <td><%= item[:year] %></td>
         </tr>
         <tr class="active">
           <th scope="row">サイズ</th>
-          <td><%= attr[:phys]%></td>
+          <td><%= item[:phys]%></td>
         </tr>
         <tr>
           <th scope="row">シリーズ</th>
-          <td><%= attr[:series] %></td>
+          <td><%= item[:series] %></td>
         </tr>
         <tr class="active">
           <th scope="row">備考</th>
-          <td><%= attr[:note] %></td>
+          <td><%= item[:note] %></td>
         </tr>
         <tr>
           <th scope="row">読み(タイトル)</th>
-          <td><%= attr[:titleheading] %></td>
+          <td><%= item[:titleheading] %></td>
         </tr>
         <tr class="active">
           <th scope="row">読み(著者名)</th>
-          <td><%= attr[:authorheading] %></td>
+          <td><%= item[:authorheading] %></td>
         </tr>
 				<tr>
 					<th scope="row">保持記録</th>
-					<td><%= attr[:holdingsrecord] %></td>
+					<td><%= item[:holdingsrecord] %></td>
 				</tr>
 				<tr>
 					<th scope="row">NDC</th>
-					<td><%= attr[:holdingloc] %></td>
+					<td><%= item[:holdingloc] %></td>
 				</tr>
       </tbody>
     </table>
