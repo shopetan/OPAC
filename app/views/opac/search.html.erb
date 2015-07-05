@@ -7,10 +7,24 @@
         <hr class="star-primary">
       </div>
     </div>
+		<div class="col-lg-8 col-lg-offset-2">
+			<div class="text-center">
+				<div class="panel panel-primary">
+					<div class="panel-heading">簡易検索</div>
+					<div class="panel-body">
+						<%= search_form_for @query, url: {:action=>'search'}, html: {:class=>"form"}, method: 'get' do |f| %>
+						<div class="text-center">
+							<%= f.text_field :nbc_or_isbn_or_tr_or_author_or_ed_or_pub_or_year_or_phys_or_series_or_note_or_titleheading_or_authorheading_or_holdingphys_or_holdingsrecord_or_holdingloc_cont, class: 'form-control', placeholder: 'フリーワード検索' %>
+						</div>
+						<% end %>
+					</div>
+				</div>
+			</div>
+		</div>
     <div class="col-lg-8 col-lg-offset-2">
       <div class="text-center">
-        <div class="panel panel-success">
-          <div class="panel-heading">検索条件</div>
+        <div class="panel panel-info">
+          <div class="panel-heading">詳細検索はここをクリック</div>
           <div class="panel-body">
             <%= search_form_for @query, url: {:action=>'search'}, html: {:class=>"form"}, method: 'get' do |f| %>
               <div class="row control-group">
@@ -36,8 +50,8 @@
                     <%= f.text_field :authorheading_cont, class: 'form-control', placeholder: '読み(著者)' %>
 									</div>
 										<div class="form-inline" style="margin: 10px;">
-										<%= f.text_field :holdingphys_cont, class: 'form-control', placeholder: 'HOLDINGPHYS' %>
 										<%= f.text_field :holdingsrecord_cont, class: 'form-control', placeholder: 'JP' %>
+										<%= f.text_field :holdingphys_cont, class: 'form-control', placeholder: 'HOLDINGPHYS' %>
                     <%= f.text_field :holdingloc_cont, class: 'form-control', placeholder: 'NDL' %>
 									</div>
                 </div>
@@ -54,9 +68,10 @@
     <div class="container">
       <div class="hits-alert">
         <div class="text-center">
-          <div class="alert alert-info">
-            <p><%= @hits %>件ヒット (<%= (@page.to_i-1)*25 + 1%>~<%= (@page.to_i-1)*25 + @opac.size %>件)</p>
-          </div>
+					<h2>検索結果</h2>
+				<div class="alert alert-info">
+					<p><%= @hits %>件ヒット (<%= (@page.to_i-1)*25 + 1%>~<%= (@page.to_i-1)*25 + @opac.size %>件)</p>
+				</div>
         </div>
         <div class="panel panel-primary">
           <!-- Default panel contents -->
