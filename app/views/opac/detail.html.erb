@@ -21,39 +21,43 @@
           <th scope="row">タイトル</th>
           <td><%= item[:tr] %></td>
         </tr>
-        <tr>
+				<tr>
           <th scope="row">著者</th>
           <td><%= item[:author] %></td>
         </tr>
-        <tr class="active">
+				<tr class="active">
+          <th scope="row">エディション</th>
+          <td><%= item[:ed] %></td>
+        </tr>
+        <tr>
           <th scope="row">出版社</th>
           <td><%= item[:pub] %></td>
         </tr>
-        <tr>
+        <tr class="active">
           <th scope="row">出版日</th>
           <td><%= item[:year] %></td>
         </tr>
-        <tr class="active">
+        <tr>
           <th scope="row">サイズ</th>
           <td><%= item[:phys]%></td>
         </tr>
-        <tr>
+        <tr class="active">
           <th scope="row">シリーズ</th>
           <td><%= item[:series] %></td>
         </tr>
-        <tr class="active">
+        <tr>
           <th scope="row">備考</th>
           <td><%= item[:note] %></td>
         </tr>
-        <tr>
+        <tr class="active">
           <th scope="row">読み(タイトル)</th>
           <td><%= item[:titleheading] %></td>
         </tr>
-        <tr class="active">
+        <tr>
           <th scope="row">読み(著者名)</th>
           <td><%= item[:authorheading] %></td>
         </tr>
-				<tr>
+				<tr class="active">
 					<th scope="row">保持記録</th>
 					<td><%= item[:holdingsrecord] %></td>
 				</tr>
