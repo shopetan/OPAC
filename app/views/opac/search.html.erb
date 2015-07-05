@@ -21,21 +21,25 @@
                     <%= f.text_field :tr_cont , class: 'form-control', placeholder: 'タイトル' %>
                   </div>
                   <div class="form-inline" style="margin: 10px;">
-                    <%= f.text_field :author_cont, class: 'form-control', placeholder: '著者' %>
+										<%= f.text_field :author_cont, class: 'form-control', placeholder: '著者' %>
+										<%= f.text_field :ed_cont, class: 'form-control', placeholder: 'エディション' %>
                     <%= f.text_field :pub_cont, class: 'form-control', placeholder: '出版社' %>
-                    <%= f.text_field :year_cont, class: 'form-control', placeholder: '出版日' %>
                   </div>
                   <div class="form-inline" style="margin: 10px;">
+										<%= f.text_field :year_cont, class: 'form-control', placeholder: '出版日' %>
                     <%= f.text_field :phys_cont, class: 'form-control', placeholder: 'サイズ' %>
                     <%= f.text_field :series_cont, class: 'form-control', placeholder: 'シリーズ' %>
-                    <%= f.text_field :note_cont, class: 'form-control', placeholder: '備考' %>
                   </div>
-                  <div class="form-inline" style="margin: 10px;">
+									<div class="form-inline" style="margin: 10px;">
+										<%= f.text_field :note_cont, class: 'form-control', placeholder: '備考' %>
                     <%= f.text_field :titleheading_cont, class: 'form-control', placeholder: '読み(タイトル)' %>
                     <%= f.text_field :authorheading_cont, class: 'form-control', placeholder: '読み(著者)' %>
-                    <%= f.text_field :holdingsrecord_cont, class: 'form-control', placeholder: 'JP' %>
+									</div>
+										<div class="form-inline" style="margin: 10px;">
+										<%= f.text_field :holdingphys_cont, class: 'form-control', placeholder: 'HOLDINGPHYS' %>
+										<%= f.text_field :holdingsrecord_cont, class: 'form-control', placeholder: 'JP' %>
                     <%= f.text_field :holdingloc_cont, class: 'form-control', placeholder: 'NDL' %>
-                  </div>
+									</div>
                 </div>
               </div>
             </div>

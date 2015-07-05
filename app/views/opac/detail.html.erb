@@ -62,9 +62,13 @@
 					<td><%= item[:holdingsrecord] %></td>
 				</tr>
 				<tr>
-					<th scope="row">NDC</th>
-					<td><%= item[:holdingloc] %></td>
+					<th scope="row">HOLDINGPHYS</th>
+					<td><%= item[:holdingphys] %></td>
 				</tr>
+			<tr class="active">
+				<th scope="row">NDC</th>
+				<td><%= item[:holdingloc] %></td>
+			</tr>
       </tbody>
     </table>
   <% end %>
