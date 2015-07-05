@@ -30,6 +30,7 @@ ActiveRecord::Schema.define(version: 20150705113715) do
     t.datetime "created_at",     null: false
     t.datetime "updated_at",     null: false
     t.text     "ed"
+    t.text     "holdingphys"
   end
 
 end

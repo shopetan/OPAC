@@ -24,6 +24,7 @@ File.foreach('vendor/opac/hyperOPAC.txt') do |line|
                :note => items[9],
                :titleheading => items[10],
                :authorheading => items[11],
-               :holdingsrecord => items[12],
-               :holdingloc => items[13]})
+							 :holdingsrecord => items[12],
+							 :holdingphys => items[13],
+               :holdingloc => items[14]})
 end
