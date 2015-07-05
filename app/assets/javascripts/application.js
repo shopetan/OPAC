@@ -12,8 +12,8 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require jquery.turbolinks
 //= require cosmo/loader
 //= require cosmo/bootswatch
 //= require twitter/bootstrap
 //= require turbolinks
-

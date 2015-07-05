@@ -34,7 +34,7 @@
     <!-- Size should be 32 x 32 pixels -->
     <%= favicon_link_tag 'favicon.ico', :rel => 'shortcut icon' %>
 		<script type="text/javascript" src="http://code.jquery.com/jquery-2.1.4.js"></script>
-		<%= javascript_include_tag 'toggleSearch' %>
+		<%= javascript_include_tag 'toggleSearch','data-turbolinks-track' => false %>
     <%= javascript_include_tag "application" %>
   </head>
   <body>
