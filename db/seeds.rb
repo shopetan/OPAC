@@ -6,7 +6,7 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
-File.foreach('vendor/opac/surperOpac.txt') do |line|
+File.foreach('vendor/opac/hyperOPAC.txt') do |line|
   next if $. == 0
   line = line.chomp
 
@@ -16,13 +16,14 @@ File.foreach('vendor/opac/surperOpac.txt') do |line|
                :isbn => items[1],
                :tr => items[2],
                :author => items[3],
-               :pub => items[4],
-               :year => items[5],
-               :phys => items[6],
-               :series => items[7],
-               :note => items[8],
-               :titleheading => items[9],
-               :authorheading => items[10],
-               :holdingsrecord => items[11],
-               :holdingloc => items[12]})
+							 :ed => items[4],
+               :pub => items[5],
+               :year => items[6],
+               :phys => items[7],
+               :series => items[8],
+               :note => items[9],
+               :titleheading => items[10],
+               :authorheading => items[11],
+               :holdingsrecord => items[12],
+               :holdingloc => items[13]})
 end

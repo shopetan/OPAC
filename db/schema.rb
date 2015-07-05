@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150623014805) do
+ActiveRecord::Schema.define(version: 20150705113715) do
 
   create_table "opacs", force: :cascade do |t|
     t.text     "nbc"
@@ -29,6 +29,7 @@ ActiveRecord::Schema.define(version: 20150623014805) do
     t.text     "holdingloc"
     t.datetime "created_at",     null: false
     t.datetime "updated_at",     null: false
+    t.text     "ed"
   end
 
 end
